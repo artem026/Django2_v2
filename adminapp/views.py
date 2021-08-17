@@ -29,7 +29,7 @@ class UserCreateView(CreateView):
 
 @user_passes_test(lambda u: u.is_superuser)
 def user_update(request, pk):
-    title = 'пользователи/рудактирование'
+    title = 'пользователи/редактирование'
 
     edit_user = get_object_or_404(User, pk=pk)
 
@@ -239,7 +239,7 @@ def product_delete(request, pk):
 
     context = {
         'title': title,
-        'зкщвгсе_to_delete': product,
+        'product_to_delete': product,
     }
 
     return render(request, 'adminapp/product_delete.html', context)
